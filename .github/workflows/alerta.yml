@@ -1,0 +1,17 @@
+name: Enviar notificación a ntfy.sh
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar notificación
+        run: |
+          curl -H "Title: Deploy ITLA" \
+               -H "Priority: high" \
+               -d "¡Se hizo push a la rama main del repositorio!" \
+               https://ntfy.sh/devops-itla
