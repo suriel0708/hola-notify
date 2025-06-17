@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Enviar notificación
         run: |
-          curl -H "Title: Deploy ITLA" \
+          curl -H "Title: El usuario de Github suriel0708 ha realizado cambios en su rama" \
                -H "Priority: high" \
                -d "¡Se hizo push a la rama main del repositorio!" \
                https://ntfy.sh/devops-itla
